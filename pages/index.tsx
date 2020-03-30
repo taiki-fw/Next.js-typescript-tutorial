@@ -1,3 +1,12 @@
-const Home = () => <h1>Hello World</h1>;
+import { NextPage } from "next";
+
+const Home: NextPage<{ userAgent: string }> = ({ userAgent }) => (
+  <h1>Hello World - user agent: {userAgent}</h1>
+);
+
+Home.getInitialProps = async ({ req }) => {
+  const userAgent = req ? req.headers["user-agent"] || "" : navigator.userAgent;
+  return { userAgent };
+};
 
 export default Home;
