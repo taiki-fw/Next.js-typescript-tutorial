@@ -2,13 +2,14 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 export type User = {
   id: number;
-  name: string;
+  firstName: string;
+  familyName: string;
 };
 
 const users = [
-  { id: 1, name: "a" },
-  { id: 2, name: "b" },
-  { id: 3, name: "c" },
+  { id: 1, firstName: "a", familyName: "A" },
+  { id: 2, firstName: "b", familyName: "B" },
+  { id: 3, firstName: "c", familyName: "C" },
 ];
 
 export default function handler(
