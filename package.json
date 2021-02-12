@@ -14,8 +14,10 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
+    "@mojotech/json-type-validation": "^3.1.0",
     "next": "^9.3.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "swr": "^0.4.2"
   }
 }
